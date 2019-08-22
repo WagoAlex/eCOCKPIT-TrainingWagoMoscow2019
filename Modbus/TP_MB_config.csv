@@ -1,0 +1,27 @@
+DataPointName;IecDataType;IsExpliciteChannel;WriteFunctionCode;ReadFunctionCode;WriteAddress;ReadAddress;WriteBitPosition;ReadBitPosition
+wWatchdogCommand;WORD;True;6;0;64000;0;0;0
+wWatchdogTimeOut;WORD;True;6;3;64001;64001;0;0
+wWatchdogState;WORD;True;0;3;0;64002;0;0
+wWatchdogConfig;WORD;True;6;3;64003;64003;0;0
+wWatchdogTcpConn;WORD;True;6;3;64004;64004;0;0
+wLEDErrorCode;ARRAY[0..2] OF WORD;True;0;3;0;64010;0;0
+wPlcState;WORD;True;0;3;0;64013;0;0
+wOrderNumber;ARRAY[0..3] OF WORD;True;0;3;0;64016;0;0
+wFirmwareVersion;WORD;True;0;3;0;64020;0;0
+wHardwareVersion;WORD;True;0;3;0;64021;0;0
+wFirmwareloaderVersion;WORD;True;0;3;0;64022;0;0
+wProcessImageVersion;WORD;True;0;3;0;64023;0;0
+wLengthProcessimageInput;WORD;True;0;3;0;64064;0;0
+wLengthProcessimageAnalogueInput;WORD;True;0;3;0;64065;0;0
+wLengthProcessimageDigitalInput;WORD;True;0;3;0;64066;0;0
+wLengthProcessimageOutput;WORD;True;0;3;0;64067;0;0
+wLengthProcessimageAnalogueOutput;WORD;True;0;3;0;64068;0;0
+wLengthProcessimageDigitalOutput;WORD;True;0;3;0;64069;0;0
+wMacId1;ARRAY[0..2] OF WORD;True;0;3;0;64032;0;0
+wConst1234;WORD;True;0;3;0;64160;0;0
+wConstAAAA;WORD;True;0;3;0;64161;0;0
+wConst5555;WORD;True;0;3;0;64162;0;0
+wLiveRegister;WORD;True;0;3;0;64250;0;0
+wWill;WORD;True;6;3;0;0;0;0
+Application.PLC_PRG.myvalue;BYTE;False;0;3;0;0;0;0
+Application.PLC_PRG.xGo;BOOL;False;0;3;0;0;0;8
