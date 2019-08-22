@@ -1,0 +1,44 @@
+Type;Parent;Name;IO-Type;DataType;Comment;PIAssignment
+KBUS;0750-1405;;;;;PLC
+KBUS;Elm.1;xGewicht;Input;BOOL;xGewicht;
+KBUS;Elm.2;xGroesse;Input;BOOL;xGroesse;
+KBUS;Elm.3;xHoehe;Input;BOOL;xHoehe;
+KBUS;Elm.4;;Input;BOOL;E 4: Digital Eingang;
+KBUS;Elm.5;;Input;BOOL;E 5: Digital Eingang;
+KBUS;Elm.6;;Input;BOOL;E 6: Digital Eingang;
+KBUS;Elm.7;;Input;BOOL;E 7: Digital Eingang;
+KBUS;Elm.8;;Input;BOOL;E 8: Digital Eingang;
+KBUS;Elm.9;xEingang_9;Input;BOOL;E 9: Digital Eingang;
+KBUS;Elm.10;xEingang_10;Input;BOOL;E 10: Digital Eingang;
+KBUS;Elm.11;xEingang_11;Input;BOOL;E 11: Digital Eingang;
+KBUS;Elm.12;xEingang_12;Input;BOOL;E 12: Digital Eingang;
+KBUS;Elm.13;xEingang_13;Input;BOOL;E 13: Digital Eingang;
+KBUS;Elm.14;xEingang_14;Input;BOOL;E 14: Digital Eingang;
+KBUS;Elm.15;xEingang_15;Input;BOOL;E 15: Digital Eingang;
+KBUS;Elm.16;xEingang_16;Input;BOOL;Rämbazömba und Science Fiction;
+KBUS;0750-1504;;;;;PLC
+KBUS;Elm.1;xProdukt_OK;Output;BOOL;xProdukt_OK;
+KBUS;Elm.2;;Output;BOOL;A 2: Digital Ausgang;
+KBUS;Elm.3;;Output;BOOL;A 3: Digital Ausgang;
+KBUS;Elm.4;;Output;BOOL;A 4: Digital Ausgang;
+KBUS;Elm.5;;Output;BOOL;A 5: Digital Ausgang;
+KBUS;Elm.6;;Output;BOOL;A 6: Digital Ausgang;
+KBUS;Elm.7;;Output;BOOL;A 7: Digital Ausgang;
+KBUS;Elm.8;;Output;BOOL;A 8: Digital Ausgang;
+KBUS;Elm.9;xAusgang_9;Output;BOOL;A 9: Digital Ausgang;
+KBUS;Elm.10;xAusgang_10;Output;BOOL;A 10: Digital Ausgang;
+KBUS;Elm.11;xAusgang_11;Output;BOOL;A 11: Digital Ausgang;
+KBUS;Elm.12;xAusgang_12;Output;BOOL;A 12: Digital Ausgang;
+KBUS;Elm.13;xAusgang_13;Output;BOOL;A 13: Digital Ausgang;
+KBUS;Elm.14;xAusgang_14;Output;BOOL;A 14: Digital Ausgang;
+KBUS;Elm.15;xAusgang_15;Output;BOOL;A 15: Digital Ausgang;
+KBUS;Elm.16;xAusgang_16;Output;BOOL;A 16: Digital Ausgang;
+KBUS;0750-0469/0003-0000;;;;;PLC
+KBUS;Elm.1;iRohThermo_1;Input;INT;E 1: Analog Eingang;
+KBUS;Elm.2;iRohThermo_2;Input;INT;E 2: Analog Eingang;
+KBUS;0750-0467;;;;;PLC
+KBUS;Elm.1;wRohAnalogIn_1;Input;WORD;E 1: Analog Eingang;
+KBUS;Elm.2;wRohAnalogIn_2;Input;WORD;E 2: Analog Eingang;
+KBUS;0750-0550;;;;;PLC
+KBUS;Elm.1;;Output;WORD;A 1: Analog Ausgang;
+KBUS;Elm.2;;Output;WORD;A 2: Analog Ausgang;

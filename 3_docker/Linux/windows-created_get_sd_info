@@ -1,0 +1,13 @@
+#!/bin/bash
+
+var2=$(df /media/sd/ 2>/dev/null)
+count2=$(df /media/sd/ 2>/dev/null | wc -c)
+
+if [ "$count2" -le 100 ];then 
+	echo -e "SD ist nicht da"
+else 
+	echo -e "SD ist da"
+fi
+
+#SD Karten Größe abfragen
+#df /media/sd/ | cut -c 41-51 | cut -dA -f1
