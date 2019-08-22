@@ -1,0 +1,833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WAGOTLC_ProjectDescription Version="1.1.7.1" Guid="97D586C1-8DD1-48F3-880F-8853A6485540" Generated="8/1/2019 8:43:26 AM">
+  <CConfiguration Text="Konfiguration">
+    <Property Name="Projectname" Val="WM_Outstation.wtc" />
+    <Property Name="Comment" Val="Test" />
+    <Property Name="IEC60870_ClockSyncMode" Val="0" />
+    <Property Name="IEC60870_ClockSync103Timeout_Label" Val="t#10m" />
+    <Property Name="IEC60870_ClockSync103Timeout" Val="t#10m" />
+    <Property Name="IEC60870_TimeStampCP56_SU" Val="True" />
+    <Property Name="IEC60870_TimeStampCP56_Weekday" Val="True" />
+    <Property Name="IEC60870_ExecutionTime_Default" Val="t#2s" />
+    <Property Name="IEC60870_ExecutionTime_Short" Val="t#500ms" />
+    <Property Name="IEC60870_ExecutionTime_Long" Val="t#5s" />
+    <Property Name="IEC60870_CommandLock" Val="False" />
+    <Property Name="IEC60870_CommandTimeValidity" Val="t#0s" />
+    <Property Name="IEC60870_BehaviorQRP" Val="1" />
+    <Property Name="IEC60870_EventBuffer" Val="16" />
+    <CServer60870_104E1 Text="IEC 60870-5-104 Slave E1">
+      <Property Name="MaxMsgLen" Val="120" />
+      <Property Name="COTArchiveValues" Val="48" />
+      <Property Name="CounterMode" Val="2" />
+      <Property Name="LocalFreeze" Val="30" />
+      <Property Name="CounterReset" Val="False" />
+      <Property Name="SelectBeforeExecute" Val="0" />
+      <Property Name="SelectBeforeExecuteTimeout" Val="t#5s" />
+      <Property Name="ParameterK" Val="12" />
+      <Property Name="ParameterW" Val="8" />
+      <Property Name="ParameterT1" Val="T#15s" />
+      <Property Name="ParameterT2" Val="T#10s" />
+      <Property Name="ParameterT3" Val="T#20s" />
+      <Property Name="TCPPort" Val="2404" />
+      <Property Name="MaxClients" Val="1" />
+      <Property Name="PermittedIPCheck" Val="False" />
+      <Property Name="PermittedIP1_Client1" Val="0.0.0.0" />
+      <Property Name="PermittedIP2_Client1" Val="0.0.0.0" />
+      <Property Name="PermittedIP3_Client1" Val="0.0.0.0" />
+      <Property Name="LinkOkClient1" Val="0" />
+      <Property Name="PermittedIP1_Client2" Val="0.0.0.0" />
+      <Property Name="PermittedIP2_Client2" Val="0.0.0.0" />
+      <Property Name="PermittedIP3_Client2" Val="0.0.0.0" />
+      <Property Name="LinkOkClient2" Val="0" />
+      <Property Name="PermittedIP1_Client3" Val="0.0.0.0" />
+      <Property Name="PermittedIP2_Client3" Val="0.0.0.0" />
+      <Property Name="PermittedIP3_Client3" Val="0.0.0.0" />
+      <Property Name="LinkOkClient3" Val="0" />
+      <Property Name="PermittedIP1_Client4" Val="0.0.0.0" />
+      <Property Name="PermittedIP2_Client4" Val="0.0.0.0" />
+      <Property Name="PermittedIP3_Client4" Val="0.0.0.0" />
+      <Property Name="LinkOkClient4" Val="0" />
+      <CASDULayer Text="[00001] Station address (ASDU)">
+        <Property Name="Comment" Val="" />
+        <Property Name="ASDUAdr_2Byte" Val="1" />
+        <CObjectServer_M_DP Text="[0.0.1 = 1] [TI31] Double-point information">
+          <Property Name="InfoObjTyp_DP" Val="31" />
+          <Property Name="Comment" Val="" />
+          <Property Name="InfoObjAdr3" Val="0" />
+          <Property Name="InfoObjAdr2" Val="0" />
+          <Property Name="InfoObjAdr1" Val="1" />
+          <Property Name="GARequestBehavior" Val="20" />
+          <Property Name="CyclicTransmissionCOT3" Val="0" />
+          <Property Name="DPI1" Val="b4e896f9-02a7-4328-9c47-5004514db3ce" />
+          <Property Name="DPI2" Val="c25907b0-edc2-4083-b063-dd00543e7986" />
+          <Property Name="BL" Val="0" />
+          <Property Name="SB" Val="0" />
+          <Property Name="NT" Val="" />
+          <Property Name="IV" Val="09876181-0cb7-4a40-a973-1f8b7e350ab7" />
+        </CObjectServer_M_DP>
+      </CASDULayer>
+    </CServer60870_104E1>
+    <CClient60870_103 Text="IEC 60870-5-103 Master">
+      <Property Name="ComPort" Val="1" />
+      <Property Name="Baudrate" Val="5" />
+      <Property Name="ComType103" Val="4" />
+      <Property Name="ComRS232PreTime" Val="20" />
+      <Property Name="ComRS232PostTime" Val="20" />
+      <Property Name="MaxRTUCalls" Val="1" />
+      <Property Name="Client_CS_Type" Val="0" />
+      <Property Name="Client_CS_Time" Val="T#10m" />
+      <Property Name="Client_GI_Type" Val="0" />
+      <Property Name="Client_GI_Time" Val="T#10m" />
+      <CClient60870_103_RTU Text="[001.001] IEC 60870-5-103 Slave connection">
+        <Property Name="Comment" Val="" />
+        <Property Name="LinkOk" Val="0" />
+        <Property Name="LinkAddr" Val="1" />
+        <Property Name="ASDUAdr" Val="1" />
+        <Property Name="CS_Type" Val="2" />
+        <Property Name="CS_Time" Val="T#10m" />
+        <Property Name="GI_Type" Val="2" />
+        <Property Name="GI_Time" Val="T#10m" />
+        <Property Name="UseCharE5" Val="0" />
+        <Property Name="RTUReactionTime" Val="t#500ms" />
+      </CClient60870_103_RTU>
+    </CClient60870_103>
+  </CConfiguration>
+  <MappingList>
+    <CModule Name="" ID="1ea9c160-96b4-4977-b921-2f039536a4dc">
+      <ClassProperty Name="Slot" Val="0" />
+      <ClassProperty Name="Channels" Val="0" />
+      <ClassProperty Name="SignalType" Val="Local" />
+      <CSignal Name="0001" ID="09876181-0cb7-4a40-a973-1f8b7e350ab7">
+        <ClassProperty Name="Name" Val="0001" />
+        <ClassProperty Name="Address" Val="LVx1" />
+        <ClassProperty Name="SignalType" Val="Local" />
+        <ClassProperty Name="Variable" Val="xValid" />
+        <ClassProperty Name="IsGVLVariable" Val="True" />
+        <ClassProperty Name="PreProcessID" Val="4a8f2813-3ca9-4752-88ba-d3a133a31463" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+      </CSignal>
+    </CModule>
+    <CModule Name="075x-16DI" ID="1ff3b38c-1e6c-44b0-8ebf-2f9798c13fcd">
+      <ClassProperty Name="Slot" Val="1" />
+      <ClassProperty Name="Name" Val="075x-16DI" />
+      <ClassProperty Name="Channels" Val="0" />
+      <ClassProperty Name="SignalType" Val="DI" />
+      <CSignal Name="%IX2.0" ID="b4e896f9-02a7-4328-9c47-5004514db3ce">
+        <ClassProperty Name="Name" Val="%IX2.0" />
+        <ClassProperty Name="Address" Val="%IX2.0" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="Variable" Val="xBreaker_Q0_M_Open" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="aaa39821-c952-4693-b015-6b0c4568776b" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX2.1" ID="c25907b0-edc2-4083-b063-dd00543e7986">
+        <ClassProperty Name="Name" Val="%IX2.1" />
+        <ClassProperty Name="Address" Val="%IX2.1" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="Variable" Val="xBreaker_Q0_M_Closed" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="2d511b24-aa2a-4d58-bb4d-3ab7964f5e77" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX2.2" ID="6ff19f2f-4fa8-4039-b527-3829ce38fb9b">
+        <ClassProperty Name="Name" Val="%IX2.2" />
+        <ClassProperty Name="Address" Val="%IX2.2" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="Variable" Val="xBreaker_Q1_M_Open" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="af87d158-8e63-4213-af2e-c97e7ca1ad2b" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX2.3" ID="14492cd7-403b-4e2c-b402-78a09ce080e7">
+        <ClassProperty Name="Name" Val="%IX2.3" />
+        <ClassProperty Name="Address" Val="%IX2.3" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="Variable" Val="xBreaker_Q1_M_Closed" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="a0a50cb8-db49-46cb-9763-56f8839af31c" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX2.4" ID="8d4c8d17-4f91-4bea-a57c-25d8735d7137">
+        <ClassProperty Name="Name" Val="%IX2.4" />
+        <ClassProperty Name="Address" Val="%IX2.4" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="244436d9-8f5b-4bdf-9c0a-5e72c0de60ba" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX2.5" ID="97022594-1473-4623-ac1f-b360a1f20bfe">
+        <ClassProperty Name="Name" Val="%IX2.5" />
+        <ClassProperty Name="Address" Val="%IX2.5" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="4d93ea0e-97dc-4cb5-939e-3ec7699a13c9" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX2.6" ID="ac49c94b-1f06-4a55-a03d-d886c9ac15c9">
+        <ClassProperty Name="Name" Val="%IX2.6" />
+        <ClassProperty Name="Address" Val="%IX2.6" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="c6f273e4-4c19-4dc3-9d86-eb3ded668f93" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX2.7" ID="5b0c361a-d4c3-4acb-8894-6516ce47bf10">
+        <ClassProperty Name="Name" Val="%IX2.7" />
+        <ClassProperty Name="Address" Val="%IX2.7" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="ce453309-3db3-4ec8-8b4f-e9d050356f58" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.0" ID="4acabdbe-83ba-46eb-92a8-b34a99e5f15f">
+        <ClassProperty Name="Name" Val="%IX3.0" />
+        <ClassProperty Name="Address" Val="%IX3.0" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="6f58a8d8-eb7e-4e78-90ea-5270ce25e597" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.1" ID="58b3ea34-b11c-42d2-bcbf-a329a2d0c71a">
+        <ClassProperty Name="Name" Val="%IX3.1" />
+        <ClassProperty Name="Address" Val="%IX3.1" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="bf37394e-a4df-4158-b336-8a02167f850d" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.2" ID="928de16a-4c03-4547-9409-1a96bee12269">
+        <ClassProperty Name="Name" Val="%IX3.2" />
+        <ClassProperty Name="Address" Val="%IX3.2" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="b30cbaa9-5423-421a-82c5-77a4c1b4f2f6" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.3" ID="6ba0a4bc-6a89-4d10-bb4f-3c51b405b042">
+        <ClassProperty Name="Name" Val="%IX3.3" />
+        <ClassProperty Name="Address" Val="%IX3.3" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="19dd1c75-2748-4f93-9acc-67c9d8f08f07" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.4" ID="95ea9e0a-db18-4771-943a-9b0047686c0c">
+        <ClassProperty Name="Name" Val="%IX3.4" />
+        <ClassProperty Name="Address" Val="%IX3.4" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="d447b0b5-f622-46e9-92e0-72dc5c159e23" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.5" ID="4118274d-10f8-48a0-a10e-b00c37d82877">
+        <ClassProperty Name="Name" Val="%IX3.5" />
+        <ClassProperty Name="Address" Val="%IX3.5" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="f1db0096-db04-4006-a7e7-2aacdccb935d" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.6" ID="f50bf903-fafa-4815-8a1e-2ac5f7104ec4">
+        <ClassProperty Name="Name" Val="%IX3.6" />
+        <ClassProperty Name="Address" Val="%IX3.6" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="9ee39739-b9eb-40dd-829a-02d169ddae5c" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IX3.7" ID="1269bbb8-7ec0-41f4-8220-9dbca11dcc83">
+        <ClassProperty Name="Name" Val="%IX3.7" />
+        <ClassProperty Name="Address" Val="%IX3.7" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="2a8d21a3-5903-4b38-a755-9f0db6b7f3c0" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+    </CModule>
+    <CModule Name="075x-16DO" ID="1428a482-4265-4472-ab09-dbeb281d3d50">
+      <ClassProperty Name="Slot" Val="2" />
+      <ClassProperty Name="Name" Val="075x-16DO" />
+      <ClassProperty Name="Channels" Val="0" />
+      <ClassProperty Name="SignalType" Val="DO" />
+      <CSignal Name="%QX0.0" ID="027d3b68-c08f-4e1c-8234-59ed53e6aef4">
+        <ClassProperty Name="Name" Val="%QX0.0" />
+        <ClassProperty Name="Address" Val="%QX0.0" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="Variable" Val="xBreaker_Q9_C_Open" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="54213718-3078-4b6c-803e-7dd3bba51453" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX0.1" ID="60735669-4bcc-4447-842e-eb45cfef2a1f">
+        <ClassProperty Name="Name" Val="%QX0.1" />
+        <ClassProperty Name="Address" Val="%QX0.1" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="Variable" Val="xBreaker_Q9_C_Close" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="2489935b-0c61-4f96-87d1-07b427a3ca7b" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX0.2" ID="409edf62-4509-4d9c-bbe6-f6c116c47ef6">
+        <ClassProperty Name="Name" Val="%QX0.2" />
+        <ClassProperty Name="Address" Val="%QX0.2" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="362e76c1-9e24-4b6a-ae8f-4cc468bf0513" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX0.3" ID="24096bf0-d371-43ad-bb9f-1aaae680c0d3">
+        <ClassProperty Name="Name" Val="%QX0.3" />
+        <ClassProperty Name="Address" Val="%QX0.3" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="9fca97d4-9b0f-4f4a-ad46-7b39ae687bbb" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX0.4" ID="65dd629d-deb7-45ba-9286-be12626305c6">
+        <ClassProperty Name="Name" Val="%QX0.4" />
+        <ClassProperty Name="Address" Val="%QX0.4" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="1b14c5bc-932f-4316-b90b-23fe6a968d65" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX0.5" ID="69108017-d743-4337-a3d9-d867da6a5f5e">
+        <ClassProperty Name="Name" Val="%QX0.5" />
+        <ClassProperty Name="Address" Val="%QX0.5" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="12ab6dd9-160b-4af2-adf6-22dd2e734019" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX0.6" ID="c0be756f-6c98-4c36-898a-368fecd45205">
+        <ClassProperty Name="Name" Val="%QX0.6" />
+        <ClassProperty Name="Address" Val="%QX0.6" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="88e75a46-4f37-491a-b6c7-5b3368b46631" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX0.7" ID="b60d37c0-bd35-44dc-8e30-29ba4d79192b">
+        <ClassProperty Name="Name" Val="%QX0.7" />
+        <ClassProperty Name="Address" Val="%QX0.7" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="4b4f4f3d-6bb1-4fd0-bc5f-6773b697286c" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.0" ID="beff4163-f358-44c6-bbe5-b21d2740cfdc">
+        <ClassProperty Name="Name" Val="%QX1.0" />
+        <ClassProperty Name="Address" Val="%QX1.0" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="de386998-cab4-40f7-8467-d502a0ac2056" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.1" ID="3b0d506e-fbf7-45e5-b80e-cfbca33e079c">
+        <ClassProperty Name="Name" Val="%QX1.1" />
+        <ClassProperty Name="Address" Val="%QX1.1" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="9d400bb7-1897-458f-9b1b-dc90db74db39" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.2" ID="be6ec492-21b1-4c5d-8a5d-c87423e2652c">
+        <ClassProperty Name="Name" Val="%QX1.2" />
+        <ClassProperty Name="Address" Val="%QX1.2" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="be690034-a7b2-4cf0-88c8-bf5c44a85eec" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.3" ID="0e9f2e1c-818f-4c77-8907-1ee819b48791">
+        <ClassProperty Name="Name" Val="%QX1.3" />
+        <ClassProperty Name="Address" Val="%QX1.3" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="28aad7e8-8541-4ce7-8508-8dbca432c28d" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.4" ID="ee6cb8b8-ec8f-49be-8644-bc01fe5fd699">
+        <ClassProperty Name="Name" Val="%QX1.4" />
+        <ClassProperty Name="Address" Val="%QX1.4" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="49f7f7a4-4e88-45a1-bb80-fdbd30ef969c" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.5" ID="abc256d3-45aa-4ccd-bbb6-fbb2392d0a25">
+        <ClassProperty Name="Name" Val="%QX1.5" />
+        <ClassProperty Name="Address" Val="%QX1.5" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="98de8546-0388-4524-93bf-645ce2a70a4a" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.6" ID="cba72d3e-4b05-4a51-b292-0c29c602a3c8">
+        <ClassProperty Name="Name" Val="%QX1.6" />
+        <ClassProperty Name="Address" Val="%QX1.6" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="62439475-1b54-4b69-8c68-5ed3ff8c4fe0" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QX1.7" ID="4cd79cdb-1458-4a65-a1dc-25fe3caa00dd">
+        <ClassProperty Name="Name" Val="%QX1.7" />
+        <ClassProperty Name="Address" Val="%QX1.7" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="b471dd46-d983-4cf3-bd5c-7c2b8cfdbb5d" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+    </CModule>
+    <CModule Name="0750-0469/0003-0000" ID="c2fab84c-242d-42ed-9434-790ff3c0bb5f">
+      <ClassProperty Name="Slot" Val="3" />
+      <ClassProperty Name="Name" Val="0750-0469/0003-0000" />
+      <ClassProperty Name="Channels" Val="0" />
+      <ClassProperty Name="SignalType" Val="AI" />
+      <CSignal Name="%IW2" ID="8a1d9c80-8e67-47a6-94cb-3115cda2cb14">
+        <ClassProperty Name="Name" Val="%IW2" />
+        <ClassProperty Name="Address" Val="%IW2" />
+        <ClassProperty Name="SignalType" Val="AI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="cee012cf-9f1c-4034-8c9b-29cc0a0698c3" />
+        <ClassProperty Name="DataType" Val="INT" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_AIChoice" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_INT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_DINT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_REAL" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_INT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_DINT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_REAL" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Min" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Max" Val="32767" />
+        <Property Name="SignalPreprocess_ScalingOffset" Val="0" />
+        <Property Name="SignalPreprocess_ScalingFactor" Val="0" />
+      </CSignal>
+      <CSignal Name="%IW3" ID="d364d7c2-aeb1-49c3-b28f-fc456e898ee5">
+        <ClassProperty Name="Name" Val="%IW3" />
+        <ClassProperty Name="Address" Val="%IW3" />
+        <ClassProperty Name="SignalType" Val="AI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="2f315852-819d-48de-86b3-efc9d271e25a" />
+        <ClassProperty Name="DataType" Val="INT" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_AIChoice" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_INT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_DINT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_REAL" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_INT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_DINT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_REAL" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Min" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Max" Val="32767" />
+        <Property Name="SignalPreprocess_ScalingOffset" Val="0" />
+        <Property Name="SignalPreprocess_ScalingFactor" Val="0" />
+      </CSignal>
+    </CModule>
+    <CModule Name="0750-0467" ID="8263f27b-52e0-4755-9a91-8683744fdf0b">
+      <ClassProperty Name="Slot" Val="4" />
+      <ClassProperty Name="Name" Val="0750-0467" />
+      <ClassProperty Name="Channels" Val="0" />
+      <ClassProperty Name="SignalType" Val="AI" />
+      <CSignal Name="%IW4" ID="a566b219-d191-45f6-90ec-6d703559da8d">
+        <ClassProperty Name="Name" Val="%IW4" />
+        <ClassProperty Name="Address" Val="%IW4" />
+        <ClassProperty Name="SignalType" Val="AI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="0c12e6c0-52a0-4bb6-9979-07a265183d6e" />
+        <ClassProperty Name="DataType" Val="WORD" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_AIChoice" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_INT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_DINT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_REAL" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_INT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_DINT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_REAL" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Min" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Max" Val="32767" />
+        <Property Name="SignalPreprocess_ScalingOffset" Val="0" />
+        <Property Name="SignalPreprocess_ScalingFactor" Val="0" />
+      </CSignal>
+      <CSignal Name="%IW5" ID="482e9e1d-2c18-4c5b-bba1-f472ceb28831">
+        <ClassProperty Name="Name" Val="%IW5" />
+        <ClassProperty Name="Address" Val="%IW5" />
+        <ClassProperty Name="SignalType" Val="AI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="8e3800ed-3256-46c1-85f0-3dc6f7dfecc0" />
+        <ClassProperty Name="DataType" Val="WORD" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_AIChoice" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_INT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_DINT" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Min_REAL" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_INT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_DINT" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingProcess_Max_REAL" Val="32767" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Min" Val="0" />
+        <Property Name="SignalPreprocess_AIScalingRaw_Max" Val="32767" />
+        <Property Name="SignalPreprocess_ScalingOffset" Val="0" />
+        <Property Name="SignalPreprocess_ScalingFactor" Val="0" />
+      </CSignal>
+    </CModule>
+    <CModule Name="0750-0495" ID="4e9525ef-61b1-462c-a78c-dcda2e47b186">
+      <ClassProperty Name="Slot" Val="5" />
+      <ClassProperty Name="Name" Val="0750-0495" />
+      <ClassProperty Name="Channels" Val="0" />
+      <ClassProperty Name="SignalType" Val="DIDO" />
+      <CSignal Name="%IW6" ID="8a266a16-7e68-4348-b963-443a7d4a87a3">
+        <ClassProperty Name="Name" Val="%IW6" />
+        <ClassProperty Name="Address" Val="%IW6" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="55e6ec4a-6a86-4209-b8ea-8a6dce8777f0" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IW7" ID="4bab11cb-d064-4afc-8b55-27b4306d75e7">
+        <ClassProperty Name="Name" Val="%IW7" />
+        <ClassProperty Name="Address" Val="%IW7" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="fea3c355-90ba-4aa0-8678-c24a1b8a5cb5" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IW8" ID="0705c6fc-6c9d-4a28-b6fa-35970d3ba029">
+        <ClassProperty Name="Name" Val="%IW8" />
+        <ClassProperty Name="Address" Val="%IW8" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="2d01d447-6916-4816-a089-8be26136b474" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%IW9" ID="ad93d55d-ce02-4fe0-a05e-be3e97c9fb4a">
+        <ClassProperty Name="Name" Val="%IW9" />
+        <ClassProperty Name="Address" Val="%IW9" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="768f36c1-a343-4e05-b066-00887ccf3fc0" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%ID5" ID="f8086b6d-ed14-4a54-90ff-2a5daf7f425f">
+        <ClassProperty Name="Name" Val="%ID5" />
+        <ClassProperty Name="Address" Val="%ID5" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="4aa31a4b-3d6b-4132-86bc-5f0a892e4db3" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%ID6" ID="53507033-e359-45d2-977d-a2ccb4e50a46">
+        <ClassProperty Name="Name" Val="%ID6" />
+        <ClassProperty Name="Address" Val="%ID6" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="8d52ea83-186f-49af-8ceb-3bdb65897ab7" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%ID7" ID="8bf25158-58f3-4a77-80c3-084ee47b6ba6">
+        <ClassProperty Name="Name" Val="%ID7" />
+        <ClassProperty Name="Address" Val="%ID7" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="d586639b-b651-4da5-b886-37d3995c8248" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%ID8" ID="6ca69841-298b-4784-8480-7a5f79c64d4f">
+        <ClassProperty Name="Name" Val="%ID8" />
+        <ClassProperty Name="Address" Val="%ID8" />
+        <ClassProperty Name="SignalType" Val="DI" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="b2cb628d-fdf7-4b45-b1de-8df9b6f3710d" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="I" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DIChoice" Val="0" />
+        <Property Name="SignalPreprocess_DIDelay" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOnTime" Val="t#1s" />
+        <Property Name="SignalPreprocess_DIOffTime" Val="t#1s" />
+      </CSignal>
+      <CSignal Name="%QW2" ID="ef264f6f-0158-40e9-acc6-ca1f81bba0af">
+        <ClassProperty Name="Name" Val="%QW2" />
+        <ClassProperty Name="Address" Val="%QW2" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="a0dc0fb8-99e0-471a-894f-1dbbee68f5e9" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QW3" ID="29fc7967-5f5f-44db-bd4b-a7441e52f0fa">
+        <ClassProperty Name="Name" Val="%QW3" />
+        <ClassProperty Name="Address" Val="%QW3" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="e373b70c-ac86-4ef5-8157-b80ee926e218" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QW4" ID="05b8acaa-66c2-4dbb-8088-16f39bfd21f3">
+        <ClassProperty Name="Name" Val="%QW4" />
+        <ClassProperty Name="Address" Val="%QW4" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="e2c35fb8-5355-43ce-9e14-c2b8ca4230fb" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QW5" ID="f51fa70b-c019-42ee-b0c3-43ece1514a2d">
+        <ClassProperty Name="Name" Val="%QW5" />
+        <ClassProperty Name="Address" Val="%QW5" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="b88a20d4-616f-497c-a4db-954c24637f3a" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QD3" ID="1ab49ce1-6a9b-4c2e-9b2d-5d7f7f7e5c08">
+        <ClassProperty Name="Name" Val="%QD3" />
+        <ClassProperty Name="Address" Val="%QD3" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="dfd4e315-f752-4f2d-b4a6-33ac1dd40892" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QD4" ID="1a9d64d3-f033-41e3-a2ec-0752e58a6c9b">
+        <ClassProperty Name="Name" Val="%QD4" />
+        <ClassProperty Name="Address" Val="%QD4" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="33791f7d-f345-44ed-a71a-58b47112937f" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QD5" ID="9400dad7-2061-4099-89ff-54d22f61b4d2">
+        <ClassProperty Name="Name" Val="%QD5" />
+        <ClassProperty Name="Address" Val="%QD5" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="8b091e4c-bfb6-4e96-9837-68f3b3f94f0e" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+      <CSignal Name="%QD6" ID="3919eef1-cd65-4487-aada-58d20ea54270">
+        <ClassProperty Name="Name" Val="%QD6" />
+        <ClassProperty Name="Address" Val="%QD6" />
+        <ClassProperty Name="SignalType" Val="DO" />
+        <ClassProperty Name="IsGVLVariable" Val="False" />
+        <ClassProperty Name="PreProcessID" Val="e2b37c70-e20f-47a4-9e45-27b0259d737f" />
+        <ClassProperty Name="DataType" Val="BOOL" />
+        <ClassProperty Name="DataTypeDir" Val="O" />
+        <Property Name="SignalPreprocess_Varname" Val="" />
+        <Property Name="SignalPreprocess_DOChoice" Val="0" />
+      </CSignal>
+    </CModule>
+  </MappingList>
+  <EnumList />
+</WAGOTLC_ProjectDescription>
