@@ -1,0 +1,17 @@
+#!/bin/bash
+#Add a second ip address to the br0 interface. This script is called from ifup
+
+SECOND_IP=192.168.20.101
+SECOND_BROADCAST=192.168.20.255
+SECOND_IP2=192.168.10.101
+SECOND_BROADCAST2=192.168.10.255
+
+
+
+if [ "$IFACE" = "br0" ]; then
+	/sbin/ifconfig br0:1 $SECOND_IP netmask $SECOND_NETMASK broadcast $SECOND_BROADCAST up
+	/sbin/ifconfig br0:2 $SECOND_IP2 netmask $SECOND_NETMASK broadcast $SECOND_BROADCAST2 up
+	
+fi
+
+

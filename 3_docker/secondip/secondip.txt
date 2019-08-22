@@ -1,0 +1,2 @@
+copy "up"-script in the folder /etc/network/if-up.d and the "down"-script in the folder /etc/network/if-down.d . 
+After this please use "chmode 755" to make the files executable.

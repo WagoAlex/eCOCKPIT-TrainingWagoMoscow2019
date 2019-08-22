@@ -1,0 +1,10 @@
+#!/bin/bash
+#Delete second IP for interface br0
+
+if [ "$IFACE" = "br0" ]; then
+	/sbin/ifconfig br0:1 down
+	/sbin/ifconfig br0:2 down
+	
+fi
+
+
