@@ -1,0 +1,59 @@
+version: '3.5'
+
+services:
+   nodered:
+     depends_on:
+      - db
+     image: wagoautomation/node-red:latest
+     container_name: nodered
+     volumes:
+      - node_red_user_data:/data
+      - node_red_user_datacgroup:/sys/fs/cgroup
+     ports:
+      - "1880:1880"
+     restart: always
+   db:
+     image: influxdb:latest
+     volumes:
+      - db_data:/var/lib/influxdb
+     restart: always
+     container_name: influxdb
+     ports:
+        - "8083:8083"
+        - "8086:8086"
+        - "8090:8090"
+   db2:
+     image: turgon37/armhf-mariadb
+     volumes:
+       - db_maria_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: Master!
+       MYSQL_DATABASE: mariadb
+       MYSQL_USER: admin
+       MYSQL_PASSWORD: wago
+   portainer:
+     image: portainer/portainer:latest
+     container_name: portainer
+     volumes:
+      - portainer_data:/data
+      - /var/run/docker.sock:/var/run/docker.sock
+     restart: always
+     ports:
+      - "9000:9000"
+   grafana:
+     image: grafana/grafana:latest
+     container_name: grafana
+     ports:
+      - "3000:3000"
+   mqtt:
+     image: ericmick/armhf-mosquitto:latest
+     container_name: mqtt
+     ports:
+      - "1883:1883" 
+volumes:
+    node_red_user_data:
+    node_red_user_datacgroup:
+    db_data:
+    db_maria_data:
+    portainer_data:

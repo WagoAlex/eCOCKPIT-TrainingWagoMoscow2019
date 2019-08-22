@@ -1,0 +1,30 @@
+version: "3"
+services:
+  database:
+    image: influxdb
+    container_name: influxdb
+    restart: always
+    volumes:
+      - /media/sd/influxdata:/var/lib/influxdb
+    ports:
+     - "8086:8086"
+    networks:
+      - pfcnet
+    environment:
+     - INFLUXDB_DB=dbTemperature
+  visu:
+    image: chronograf
+    container_name: chronograf
+    restart: always
+    ports:
+      - 8888:8888
+    networks:
+      - pfcnet
+    volumes:
+      - /media/sd/chronograf:/var/lib/chronograf:rw   
+    depends_on:
+      - database
+networks:
+  pfcnet:
+  
+  

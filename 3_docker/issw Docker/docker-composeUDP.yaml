@@ -1,0 +1,42 @@
+# this yaml file is used for the e!COCKPIT project "UDP_to_influx.ecp"
+# it demonstrates the sending of values into the
+# influxdb by the upd protocol on the default port 8089.   
+# june 2019 v 1.0
+version: "3"
+services:
+  database:
+    image: influxdb
+    container_name: influxdb
+    restart: always
+    volumes:
+      - /media/sd/influxdata:/var/lib/influxdb
+    ports:
+     - "8086:8086"
+     - "8089:8089/udp"
+    networks:
+      - pfcnet
+    environment:
+     # activates the access via udp
+     - INFLUXDB_UDP_ENABLED=true 
+     - INFLUXDB_UDP_DATABASE=dbTemperature
+     # deactivates statistics to  usage.influxdata.com
+     - INFLUXDB_REPORTING_DISABLED=true 
+  visu:
+    image: chronograf
+    container_name: chronograf
+    restart: always
+    ports:
+      - 8888:8888
+    networks:
+      - pfcnet
+    environment:
+      # deactivates statistics to  usage.influxdata.com
+      - CHRONOGRAF_REPORTING_DISABLED=true 
+    volumes:
+      - /media/sd/chronograf:/var/lib/chronograf:rw   
+    depends_on:
+      - database
+networks:
+  pfcnet:
+  
+  
